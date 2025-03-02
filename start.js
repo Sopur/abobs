@@ -8,9 +8,9 @@ void (async function main() {
     server
         .json()
         .secure()
-        .static(__dirname + "/../views")
+        .static(__dirname + "/src/views")
         .links();
-    const res = await server.linkFile("discord-annoyer", __dirname + "/server.js");
+    const res = await server.linkFile("stratos", __dirname + "/src/server/server.js");
     if (res !== 201) throw new Error(`Couldn't link server file: error code '${res}`);
     console.log("Successfully linked server file");
 
