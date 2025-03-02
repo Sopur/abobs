@@ -1,5 +1,6 @@
-const google = require("@google/generative-ai");
 const fs = require("fs");
+const google = require("@google/generative-ai");
+const MarkerUtils = require("./marker.dist.js");
 
 const PromptOpts = {
     model: "",
@@ -31,9 +32,7 @@ class Analyzer {
     async googleai(opts = PromptOpts) {
         let result = await this.model.generateContent(opts.prompt);
         let txt = result.response.text();
-        if (txt.startsWith("```json")) txt = txt.slice("```json".length);
-        if (txt.endsWith("```")) txt = txt.slice(0, -3);
-        return txt;
+        return MarkerUtils.trimMarkers(txt);
     }
 
     async analyzeFile(code) {

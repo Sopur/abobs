@@ -1,0 +1,1 @@
+class MarkerUtils{static trimMarkers(s){let t=s;const r="```json";return s.startsWith(r)&&(t=t.substring(7)),t.endsWith("```")&&(t=t.substring(0,t.length-3)),t}}module.exports=MarkerUtils;
