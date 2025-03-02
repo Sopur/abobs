@@ -1,10 +1,4 @@
-function bellRandom(stddev = 1) {
-    let u1 = Math.random();
-    let u2 = Math.random();
-    let z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
-    return z0 * stddev;
-}
-
+// Map state IDs to file names
 const CastleSources = [
     undefined,
     "Construction",
@@ -12,6 +6,7 @@ const CastleSources = [
     "Mid Destruction",
     "Fireworks",
 ];
+// Enumerated castle states
 const CastleStates = {
     empty: 0,
     building: 1,
@@ -21,7 +16,8 @@ const CastleStates = {
 };
 class CastleRender {
     constructor() {
-        this.switchEmpty();
+        this.switchEmpty(); // Default to empty
+        // Basic config
         this.config = {
             scale: 1 / 20,
             ratio: {
@@ -29,7 +25,8 @@ class CastleRender {
                 y: 179,
             },
         };
-        this.displayState = -1;
+        this.displayState = -1; // Display state is unknown as default to provoke a switch
+        // Import of the showdown converter
         this.md = new showdown.Converter({
             simplifiedAutoLink: true,
             strikethrough: true,

@@ -5,10 +5,10 @@
  */
 
 async function entry(api) {
-    // All methods used here are proprietary with all rights belonging to Aristo
     // Documentation will NOT be provided for these methods
-    api.static("/stratos", api.util.ext("stratos/src/views"));
+    api.static("/stratos", api.util.ext("stratos/src/views")); // Specifies that AriNet can host the files
 
+    // Specifies to pass the express instance in the server function
     require("./src/server/server.js")(api.server, (p) => `/stratos${p}`, {
         code_processor_model: api.config.code_processor_model,
         max_tokens: api.config.max_tokens,
