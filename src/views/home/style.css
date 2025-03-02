@@ -1,0 +1,67 @@
+.background {
+    position: fixed;
+    background-image: url("../media/Brick.png");
+    background-size: cover;
+    background-repeat: repeat;
+    filter: drop-shadow(5px 5px 10px black) hue-rotate(90deg);
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+}
+
+.sidenav {
+    width: 23%;
+    height: 70%;
+    position: absolute;
+}
+
+.middle {
+    left: 25%;
+    width: 55%;
+    position: relative;
+    overflow-x: hidden;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.castle {
+    position: relative;
+    width: 100vmin;
+    height: 60vmin;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    filter: drop-shadow(5px 5px 10px black) contrast(200%);
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+#review {
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.dot {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+    filter: drop-shadow(5px 10px 10px black);
+    transition: all 0.1s ease-in-out allow-discrete;
+    cursor: pointer;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.dot:hover {
+    filter: drop-shadow(5px 10px 20px black) grayscale(50%);
+}

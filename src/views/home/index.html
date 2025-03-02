@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stratos Shield</title>
+
+        <link rel="stylesheet" href="../libs/pico.min.css" />
+        <link rel="stylesheet" href="../libs/fa.min.css" />
+        <link rel="stylesheet" href="./style.css" />
+
+        <script src="../libs/showdown.js"></script>
+        <script src="../libs/fa.min.js"></script>
+        <script type="module" src="./index.js"></script>
+    </head>
+    <body>
+        <div class="background" src="../media/Brick.png"></div>
+        <article>
+            <header class="is-fixed-above-lg">
+                <div class="container">
+                    <nav>
+                        <ul style="font-size: 30px">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <li><strong>Stratos Shield</strong></li>
+                        </ul>
+                        <ul>
+                            <strong><li>ari@abobs.com</li></strong>
+                            <li class="icons">
+                                <i class="fa-solid fa-user"></i>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </article>
+        <main>
+            <article class="sidenav">
+                <strong class="grid">
+                    <button class="secondary outline">Recent</button>
+                </strong>
+                <br />
+                <select>
+                    <option>English</option>
+                </select>
+                <select>
+                    <option>Medium Reasoning</option>
+                    <option>Low Reasoning</option>
+                    <option>High Reasoning</option>
+                </select>
+                <input type="checkbox" role="switch" id="visual_mode" checked />
+                Dark mode
+            </article>
+            <article class="middle">
+                <nav>
+                    <li></li>
+                    <li>
+                        <h2>
+                            Use Github
+                            <i class="fa-brands fa-github"></i>
+                        </h2>
+                    </li>
+                    <li></li>
+                </nav>
+                <fieldset role="group">
+                    <input type="text" placeholder="https://github/user/example.git" />
+                    <input type="submit" value="Analyze" />
+                </fieldset>
+                <hr />
+                <nav>
+                    <li>
+                        <h4><i class="fa-solid fa-upload"></i> Or upload a file</h4>
+                        <input
+                            id="upload"
+                            type="file"
+                            accept="text/plain,text/javascript,text/html,application/json,application/xml,application/x-sh,application/x-c,application/x-cpp,application/x-java,application/x-python,application/x-ruby,application/x-php,application/x-shellscript"
+                        />
+                    </li>
+                    <li>
+                        <h4><i class="fa-solid fa-clipboard"></i> Or paste</h4>
+                        <button id="clipboard" class="secondary">Paste from clipboard</button>
+                    </li>
+                </nav>
+
+                <footer id="classifier" class="container">
+                    <nav>
+                        <ul></ul>
+                        <ul>
+                            <h1 id="label">Click to check your code!</h1>
+                        </ul>
+                        <ul></ul>
+                    </nav>
+                    <article id="review" style="display: none">
+                        <button id="back" class="secondary" style="background-color: red">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                        <button id="clear" class="secondary" style="background-color: green">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                        <footer>
+                            <div id="details-1"></div>
+                            <hr />
+                            <div id="details-2"></div>
+                        </footer>
+                        <hr />
+                    </article>
+                    <section>
+                        <div id="dots"></div>
+                        <section class="grid">
+                            <nav>
+                                <ul></ul>
+                                <ul>
+                                    <img
+                                        id="castle"
+                                        class="castle"
+                                        src="../media/Construction.png"
+                                    />
+                                </ul>
+                                <ul></ul>
+                            </nav>
+                        </section>
+                    </section>
+                </footer>
+            </article>
+        </main>
+        <article style="position: absolute; width: 100%">
+            <section class="container">
+                <nav class="grid">
+                    <ul>
+                        <p><strong>© 2025 Shank's Prophets</strong></p>
+                    </ul>
+                    <ul>
+                        <p>
+                            <i class="fa-solid fa-circle-info"></i>
+                            <strong><a href="#">Terms of Service</a></strong>
+                        </p>
+                    </ul>
+                    <ul>
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            <strong
+                                ><a href="mailto:support@abobs.edu">support@abobs.com</a></strong
+                            >
+                        </p>
+                    </ul>
+                    <ul>
+                        <p>
+                            <i class="fa-brands fa-instagram"></i>
+                            <strong>
+                                Instagram:
+                                <a href="https://www.instagram.com/abobs" target="_blank"
+                                    >abobs</a
+                                ></strong
+                            >
+                        </p>
+                    </ul>
+                </nav>
+            </section>
+        </article>
+    </body>
+</html>
