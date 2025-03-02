@@ -37,6 +37,7 @@ class CastleRender {
     }
 
     get state() {
+        // State calculator
         if (this.isEmpty) return CastleStates.empty;
         if (this.isLoading) return CastleStates.building;
         if (this.mistakes === 0) return CastleStates.perfect;
@@ -45,6 +46,7 @@ class CastleRender {
     }
 
     switchLoading() {
+        // Switch to loading state
         const dotsHolder = document.getElementById("dots");
         const label = document.getElementById("label");
         this.isEmpty = false;
@@ -55,6 +57,7 @@ class CastleRender {
     }
 
     switchEmpty() {
+        // Switch to empty state
         this.isEmpty = true;
         this.isLoading = false;
         this.mistakes = 0;
